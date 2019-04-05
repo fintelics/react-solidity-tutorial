@@ -1,0 +1,654 @@
+{
+  "contractName": "Todos",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "todo",
+          "type": "bytes32"
+        }
+      ],
+      "name": "addTodo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xda2f6460"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getTodos",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xc33926cb"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getTodos\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"todo\",\"type\":\"bytes32\"}],\"name\":\"addTodo\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/shuxuanliu/Github/truffle-react/contracts/Todos.sol\":\"Todos\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/shuxuanliu/Github/truffle-react/contracts/Todos.sol\":{\"keccak256\":\"0x99b83fb29ffcc061c733e261951d4334ebea0bc1facdb29cb6ea741863e743b7\",\"urls\":[\"bzzr://d0ec1acf254668b1d7f7d46d57e392fb25cbdad418c7c9b0102f9b8993ff7e7b\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101ab806100206000396000f3fe60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c33926cb14610051578063da2f6460146100bd575b600080fd5b34801561005d57600080fd5b506100666100f8565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156100a957808201518184015260208101905061008e565b505050509050019250505060405180910390f35b3480156100c957600080fd5b506100f6600480360360208110156100e057600080fd5b8101908080359060200190929190505050610150565b005b6060600080548060200260200160405190810160405280929190818152602001828054801561014657602002820191906000526020600020905b815481526020019060010190808311610132575b5050505050905090565b60008190806001815401808255809150509060018203906000526020600020016000909192909190915055505056fea165627a7a7230582090bf1dd1f41fa5d74d43e7ff6365e34baa4dfdb94acc97357a80b1153bec77ec0029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c33926cb14610051578063da2f6460146100bd575b600080fd5b34801561005d57600080fd5b506100666100f8565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156100a957808201518184015260208101905061008e565b505050509050019250505060405180910390f35b3480156100c957600080fd5b506100f6600480360360208110156100e057600080fd5b8101908080359060200190929190505050610150565b005b6060600080548060200260200160405190810160405280929190818152602001828054801561014657602002820191906000526020600020905b815481526020019060010190808311610132575b5050505050905090565b60008190806001815401808255809150509060018203906000526020600020016000909192909190915055505056fea165627a7a7230582090bf1dd1f41fa5d74d43e7ff6365e34baa4dfdb94acc97357a80b1153bec77ec0029",
+  "sourceMap": "25:210:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:210:1;;;;;;;",
+  "deployedSourceMap": "25:210:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;145:88;;8:9:-1;5:2;;;30:1;27;20:12;5:2;145:88:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;145:88:1;;;;;;;;;;;;;;;;;68:71;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:71:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;68:71:1;;;;;;;;;;;;;;;;;;;;145:88;186:16;221:5;214:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;145:88;:::o;68:71::-;116:5;127:4;116:16;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;116:16:1;;;;;;;;;;;;;;;;;;;;;;68:71;:::o",
+  "source": "pragma solidity ^0.5.0;\n\ncontract Todos {\n    bytes32[] todos;\n\n    function addTodo(bytes32 todo) public {\n        todos.push(todo);\n    }\n\n    function getTodos() public view returns (bytes32[] memory) {\n        return todos;\n    }\n}",
+  "sourcePath": "/Users/shuxuanliu/Github/truffle-react/contracts/Todos.sol",
+  "ast": {
+    "absolutePath": "/Users/shuxuanliu/Github/truffle-react/contracts/Todos.sol",
+    "exportedSymbols": {
+      "Todos": [
+        83
+      ]
+    },
+    "id": 84,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 83,
+        "linearizedBaseContracts": [
+          83
+        ],
+        "name": "Todos",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 61,
+            "name": "todos",
+            "nodeType": "VariableDeclaration",
+            "scope": 83,
+            "src": "46:15:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 59,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "46:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 60,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "46:9:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 72,
+              "nodeType": "Block",
+              "src": "106:33:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 69,
+                        "name": "todo",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 63,
+                        "src": "127:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 66,
+                        "name": "todos",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 61,
+                        "src": "116:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+                          "typeString": "bytes32[] storage ref"
+                        }
+                      },
+                      "id": 68,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "116:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_bytes32_$returns$_t_uint256_$",
+                        "typeString": "function (bytes32) returns (uint256)"
+                      }
+                    },
+                    "id": 70,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "116:16:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 71,
+                  "nodeType": "ExpressionStatement",
+                  "src": "116:16:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 73,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addTodo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 64,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 63,
+                  "name": "todo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 73,
+                  "src": "85:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 62,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "85:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "84:14:1"
+            },
+            "returnParameters": {
+              "id": 65,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "106:0:1"
+            },
+            "scope": 83,
+            "src": "68:71:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 81,
+              "nodeType": "Block",
+              "src": "204:29:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 79,
+                    "name": "todos",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 61,
+                    "src": "221:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+                      "typeString": "bytes32[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 78,
+                  "id": 80,
+                  "nodeType": "Return",
+                  "src": "214:12:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 82,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTodos",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 74,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "162:2:1"
+            },
+            "returnParameters": {
+              "id": 78,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 77,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 82,
+                  "src": "186:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 75,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "186:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 76,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "186:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:18:1"
+            },
+            "scope": 83,
+            "src": "145:88:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 84,
+        "src": "25:210:1"
+      }
+    ],
+    "src": "0:235:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/shuxuanliu/Github/truffle-react/contracts/Todos.sol",
+    "exportedSymbols": {
+      "Todos": [
+        83
+      ]
+    },
+    "id": 84,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 83,
+        "linearizedBaseContracts": [
+          83
+        ],
+        "name": "Todos",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 61,
+            "name": "todos",
+            "nodeType": "VariableDeclaration",
+            "scope": 83,
+            "src": "46:15:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 59,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "46:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 60,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "46:9:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 72,
+              "nodeType": "Block",
+              "src": "106:33:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 69,
+                        "name": "todo",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 63,
+                        "src": "127:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 66,
+                        "name": "todos",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 61,
+                        "src": "116:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+                          "typeString": "bytes32[] storage ref"
+                        }
+                      },
+                      "id": 68,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "116:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_bytes32_$returns$_t_uint256_$",
+                        "typeString": "function (bytes32) returns (uint256)"
+                      }
+                    },
+                    "id": 70,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "116:16:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 71,
+                  "nodeType": "ExpressionStatement",
+                  "src": "116:16:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 73,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addTodo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 64,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 63,
+                  "name": "todo",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 73,
+                  "src": "85:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 62,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "85:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "84:14:1"
+            },
+            "returnParameters": {
+              "id": 65,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "106:0:1"
+            },
+            "scope": 83,
+            "src": "68:71:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 81,
+              "nodeType": "Block",
+              "src": "204:29:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 79,
+                    "name": "todos",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 61,
+                    "src": "221:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+                      "typeString": "bytes32[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 78,
+                  "id": 80,
+                  "nodeType": "Return",
+                  "src": "214:12:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 82,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTodos",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 74,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "162:2:1"
+            },
+            "returnParameters": {
+              "id": 78,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 77,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 82,
+                  "src": "186:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 75,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "186:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 76,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "186:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:18:1"
+            },
+            "scope": 83,
+            "src": "145:88:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 84,
+        "src": "25:210:1"
+      }
+    ],
+    "src": "0:235:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x041d9fB664082F8Ad2A983a49Da54fAA86364a3F",
+      "transactionHash": "0xb8d076232cd6387209eca0f703aef4a109731b5becf2dc086a5755e1f38c5c83"
+    }
+  },
+  "schemaVersion": "3.0.6",
+  "updatedAt": "2019-04-05T04:34:08.350Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
